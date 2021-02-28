@@ -1,0 +1,6 @@
+<button matRipple [matRippleColor]="color" mat-fab color="primary" (click)="picker.open();" class="mat-elevation-z15" id="add-button" matTooltip="Select Date" cdkDrag cdkDragBoundary=".boundary">
+    <input matInput [matDatepicker]="picker" style="width:0px;height:0px;visibility:hidden;position: fixed;" (dateChange)="sendDatePickerValue($event)">
+    <i class="material-icons" >calendar_today</i>
+    <mat-datepicker #picker style="width:0px;display: none;"></mat-datepicker>
+</button>
+

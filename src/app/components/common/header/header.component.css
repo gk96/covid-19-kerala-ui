@@ -1,0 +1,18 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  body{margin:0;}
+  .example-icon {
+    outline: none !important;
+    border: 0 !important;
+    border-radius: 0px;
+    outline-style: none !important;
+    background-color: Transparent;
+}
+.header {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100% !important;
+    overflow: hidden;
+}

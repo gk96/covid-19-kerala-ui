@@ -1,0 +1,6 @@
+<div class="boundary" style="height:100%; width:100%;">
+    <app-header></app-header>
+    <app-home-listing [data]="report$" [loading]="loading" [date]="date"></app-home-listing>
+    <p *ngIf="report$" style="position: absolute;left: 30%; font-family: 'Roboto';font-size: 8vw;font-weight: bold;">{{errorMsg}}</p>
+    <app-date-picker (dateChange)="changeDate($event)"></app-date-picker>    
+</div>

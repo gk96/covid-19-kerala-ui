@@ -1,0 +1,25 @@
+<div class="home">
+    <p style="font-family: 'Roboto';font-weight: bold;font-size: 6vw;">{{ date | date:'longDate' }}</p>
+    <div *ngIf="!loading">
+    
+    <p class="total" [ngStyle]="{'color': data.total > 5000 ? 'red' : 'green' }">{{data.total}}</p>
+    </div>
+    <mat-list>
+        <div *ngIf="loading">
+            <mat-spinner [diameter]="160" style="position: fixed;z-index: 9;margin: auto;top: 0;left: 0;bottom: 0;right: 0;"></mat-spinner>
+        </div>
+        
+        <mat-list-item *ngFor="let item of data.districts" style="display: inline-block; ">
+            <table>
+                <colgroup>
+                    <col class="dist" />
+                    <col class="count" />
+                  </colgroup>
+                <tr>
+                <td>{{ item.name }}</td>
+                <td>{{ item.count }}</td>
+                </tr>
+            </table>
+        </mat-list-item>
+    </mat-list>
+</div>
