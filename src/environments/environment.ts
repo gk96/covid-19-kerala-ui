@@ -3,8 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 export const environment = {
   production: false,
-  apiBaseUrl: 'https://covid-19-kerala-web-api.herokuapp.com/api',
-  serverUrl: 'https://covid-19-kerala-web-api.herokuapp.com/',
+  apiBaseUrl: 'http://localhost:21021/api',
+  serverUrl: 'http://loaclhost:21021/',
   frontendUrl: 'http://localhost:4200/'
 };
 

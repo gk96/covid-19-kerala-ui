@@ -24,28 +24,15 @@ export class HomeComponent implements OnInit {
   minDate: Date;
   maxDate: Date;
   errorMsg: string;
-  isConnected: boolean;
 
-  constructor(private homeService: HomeServiceService, public datepipe: DatePipe, private commonService: CommonServiceService, private snackBar: MatSnackBar) { }
+  constructor(private homeService: HomeServiceService, public datepipe: DatePipe) { }
 
   ngOnInit() {
-    this.commonService.checkOnline().subscribe(isOnline => {
-                              if(!isOnline){
-                                this.openSnackBar("No internet");
-                              }
-                              else{
-                                this.openSnackBar("Back Online");
-                              }
-                            });
     this.getReport(this.transformDate(this.date));
   }
 
   transformDate(date){
     return this.datepipe.transform(date, 'dd/MM/yyyy');
-  }
-
-  openSnackBar(message: string) {
-    this.snackBar.open(message,'Ok');
   }
 
   changeDate(event){

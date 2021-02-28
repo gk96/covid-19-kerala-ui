@@ -9,7 +9,7 @@ export class CommonServiceService {
 
   constructor() { }
 
-  public checkOnline(): Observable<boolean> {
+  public checkOnline$(): Observable<boolean> {
     return merge<boolean>(
       fromEvent(window, 'offline').pipe(map(() => false)),
       fromEvent(window, 'online').pipe(map(() => true)),
